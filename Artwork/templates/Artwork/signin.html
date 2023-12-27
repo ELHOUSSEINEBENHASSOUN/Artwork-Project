@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90680653-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90680653-2');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="BootstrapDash">
+
+    <title>Intellcap</title>
+
+    <!-- vendor css -->
+    <link href="{% static 'lib/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/typicons.font/typicons.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="{% static 'css/azia.css' %}">
+</head>
+
+  <body class="az-body">
+
+    <div class="az-signin-wrapper">
+      <div class="az-card-signin">
+        <h1 class="az-logo">I<span>ntell</span>cap</h1>
+        <div class="az-signin-header">
+          <h2>Bienvenue de retour!</h2>
+          <h4>Veuillez vous connecter pour continuer</h4>
+
+          <form action="{% url 'signin' %}" method="post">
+
+            {% csrf_token %}
+
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+
+            <div class="form-group">
+              <label>Identifiant</label>
+              <input type="text" name="username" class="form-control" placeholder="Entrez votre identifiant" required>
+            </div><!-- form-group -->
+          
+            <div class="form-group">
+              <label>Mot de passe</label>
+              <input type="password" name="password" class="form-control" placeholder="Entrez votre mot de passe" required>
+            </div><!-- form-group -->
+            <button class="btn btn-az-primary btn-block">Se connecter</button>
+          </form>
+        </div><!-- az-signin-header -->
+        <div class="az-signin-footer">
+          <p><a href="">Mot de passe oublié ?</a></p>
+          <p>Vous n'avez pas de compte ? <a href="{% url 'register' %}">Créer un compte</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-card-signin -->
+    </div><!-- az-signin-wrapper -->
+
+
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/ionicons/ionicons.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js" type="text/javascript' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js" type="text/javascript' %}"></script>
+
+    <script src="../js/azia.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+      });
+    </script>
+  </body>
+</html>

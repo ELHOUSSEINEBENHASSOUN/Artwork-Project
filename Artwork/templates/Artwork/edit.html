@@ -1,0 +1,63 @@
+{% extends "layouts/master.html" %} {% block body %}
+
+<div class="az-content az-content-dashboard">
+    <div class="container">
+      <div class="az-content-body">
+        <div class="az-dashboard-one-title">
+          <div>
+            <h2 class="az-dashboard-title">Salut, Bienvenue!</h2>
+            <p class="az-dashboard-text">Your web analytics dashboard template.</p>
+          </div>
+          <div class="az-content-header-right">
+            <div class="media">
+              <div class="media-body">
+                <label>Date</label>
+                <h6>Oct 01, 2023</h6>
+              </div><!-- media-body -->
+            </div><!-- media -->
+            <div class="media">
+              <div class="media-body">
+                <label>Oeuvres d'art</label>
+                <h6>Toutes</h6>
+              </div><!-- media-body -->
+            </div><!-- media -->
+            <a href="{% url 'create' %}" class="btn btn-indigo btn-rounded">Ajouter</a>
+          </div>
+        </div><!-- az-dashboard-one-title -->
+  
+        <div class="az-dashboard-nav"> 
+          <nav class="nav">
+            <a class="nav-link active" data-toggle="tab" href="#">Modifier un ouvre d'arte</a>
+          </nav>
+  
+          <nav class="nav">
+            <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
+            <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
+            <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+          </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="mb-3">
+                            <label for="{{ field.id_for_label }}" class="form-label">
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-warning btn-rounded btn-block">Modifier</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+      </div><!-- az-content-body -->
+    </div>
+</div><!-- az-content -->
+
+{% endblock %}

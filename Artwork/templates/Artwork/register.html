@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90680653-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90680653-2');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="BootstrapDash">
+
+    <title>Intellcap</title>
+
+    <!-- vendor css -->
+    <link href="{% static 'lib/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/typicons.font/typicons.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="{% static 'css/azia.css' %}">
+</head>
+  <body class="az-body">
+
+    <div class="az-signup-wrapper">
+      <div class="az-column-signup-left">
+        <div>
+          <i class="typcn typcn-chart-bar-outline"></i>
+          <h1 class="az-logo">I<span>ntell</span>cap</h1>
+          <h5>Une plateforme moderne pour les œuvres d'art Marocaines</h5>
+          <p>Nous sommes enchantés de présenter Intellcap, notre initiative visant à promouvoir et à valoriser les œuvres d'art Marocaines. Avec une reconnaissance déjà établie dans plusieurs revues d'art et une présence en ligne croissante, nous croyons fermement que Intellcap est sur le point de devenir une référence dans le domaine de l'art Marocain.</p>
+          <p>Explorez notre site et découvrez par vous-même la richesse et la diversité des œuvres d'art que nous proposons. Intellcap est votre fenêtre sur le talent artistique Marocain.</p>
+          <a href="index.html" class="btn btn-outline-indigo">En savoir plus</a>
+        </div>
+
+      </div><!-- az-column-signup-left -->
+      <div class="az-column-signup">
+          <h1 class="az-logo">I<span>ntell</span>cap</h1>
+          <div class="az-signup-header">
+              <h2>Commencez</h2>
+              <h4>L'inscription est gratuite et ne prend qu'une minute.</h4>
+  
+              <form action="page-profile.html">
+                  <div class="form-group">
+                      <label>Prénom et Nom</label>
+                      <input type="text" class="form-control" placeholder="Entrez votre prénom et nom">
+                  </div><!-- form-group -->
+                  <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" class="form-control" placeholder="Entrez votre email">
+                  </div><!-- form-group -->
+                  <div class="form-group">
+                      <label>Mot de passe</label>
+                      <input type="password" class="form-control" placeholder="Entrez votre mot de passe">
+                  </div><!-- form-group -->
+                  <button class="btn btn-az-primary btn-block">Créer un compte</button>
+                  <div class="row row-xs">
+                      <div class="col-sm-6"><button class="btn btn-block"><i class="fab fa-facebook-f"></i>Facebook</button></div>
+                      <div class="col-sm-6 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-block"><i class="fab fa-twitter"></i>Twitter</button></div>
+                  </div><!-- row -->
+              </form>
+          </div><!-- az-signup-header -->
+          <div class="az-signup-footer">
+              <p>Vous avez déjà un compte ? <a href="{% url 'signin' %}">Se connecter</a></p>
+          </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+    </div><!-- az-signup-wrapper -->
+
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/ionicons/ionicons.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js" type="text/javascript' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js" type="text/javascript' %}"></script>
+
+    <script src="../js/azia.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+      });
+    </script>
+  </body>
+</html>
